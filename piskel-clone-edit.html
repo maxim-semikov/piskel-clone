@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" />
+    <title>Piskel clone edit</title>
+<link rel="shortcut icon" href="favicon.ico"></head>
+
+<body>
+    <div class="wrapper-piskel-clon-edit">
+        <header class="header">
+            <h1 class="logo">Piskel clone</h1>
+        </header>
+        <main class="main">
+            <div class="toolbar">
+                <ul class="toolbar__item tools">
+                    <li id="pen" class="tools__item fas fa-pen" data-tool="pen"></li>
+                    <li id="pen" class="tools__item fas fa-eraser" data-tool="eraser"></li>
+                    <li id="pen" class="tools__item fas fa-eye-dropper" data-tool="color-picker"></li>
+                    <li id="pen" class="tools__item fas fa-grip-vertical" data-tool="vertical-mirror"></li>
+                    <li id="pen" class="tools__item far fa-square" data-tool="rectangle"></li>
+                    <li id="pen" class="tools__item fas fa-fill disable-tool" data-tool="paint-bucket"></li>
+                    <li id="pen" class="tools__item fas fa-sun" data-tool="lighten"></li>
+
+                </ul>
+                <div class="toolbar__item color-palette">
+                    <ul class="palette">
+                        <li class="palette-color emerland"></li>
+                        <li class="palette-color turquoise"></li>
+                        <li class="palette-color peterriver"></li>
+                        <li class="palette-color amethyst"></li>
+                        <li class="palette-color sunflower"></li>
+                        <li class="palette-color carrot"></li>
+                        <li class="palette-color alizarin"></li>
+                        <li class="palette-color clouds"></li>
+                        <li class="palette-color wetasphalt"></li>
+                    </ul>
+                    <div class="cur-pev-color">
+                        <div class="cur-pev-color__item current-color">
+                            <input class="choose-color" type="color" name="color-input" id="color-input"
+                                value="#1abc9c" />
+                            <label for="color-input" class="hidden-on-small">Cur. color</label>
+                        </div>
+                        <div class="cur-pev-color__item prev-color hidden-on-small">
+                            <div id="prev-color-mark" class="palette-color carrot"></div>
+                            <p class="hidden-on-small">Prev color</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar-layers">
+                <div class="layers">
+                    <div class="canvas-background">
+                        <div class="layers__item dragn-drop activ-layer" data-layer-num="0" draggable="true">
+                            <span class="layer-control clone fas fa-clone"></span>
+                            <span class="layer-control trash fas fa-trash-alt"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="layers__new">
+                    <div class="fas fa-plus"></div>
+                    <div>Add new frame</div>
+                </div>
+            </div>
+            <div class="canvas-wrapper">
+                <div class="canvas-background">
+                    <canvas id="main-canvas" class="main-canvas" width="32px" height="32px"></canvas>
+                </div>
+            </div>
+            <div class="animated-preview">
+                <div class="fullScreen">
+                    <div class="canvas-background">
+                        <div class="animated-preview__canvas">
+                            <span class="openFullScreen fas fa-compress"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <input class="fps-range" type="range" min="1" max="24" value="12" step="1">
+                <div class="fps-label">12 fps</div>
+                <div class="save-piskel">
+                    <a href="#" class="btn save-piskel-clone"><span class="far fa-save"></span>Save as .clpiskel</a>
+                    <a href="#" class="btn save-piskel"><span class="far fa-save"></span>Save as .piskel</a>
+                </div>
+                <div class="canvas-info">
+                    <div class="canvas-size">
+                        [ 32 x 32 ]
+                    </div>
+                    <div class="canvas-current-position">
+                        0:0
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+<script type="text/javascript" src="app.bundle.js"></script></body>
+
+</html>
